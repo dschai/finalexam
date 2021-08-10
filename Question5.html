@@ -1,0 +1,28 @@
+<!Doctype html>
+<html lang = "en">
+
+	<head>
+		<title>Question 5</title>
+
+	
+	</head>
+	
+	<body>
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		const logJson = async () => {
+			const response = await fetch('https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com');
+			const json = await response.json();
+			console.log(json);
+		}
+		logJson();
+
+	</script>
+	
+	
+
+ 
+<html>
