@@ -2,7 +2,7 @@
 <html lang = "en">
 
 	<head>
-		<title> Palindrome Program in JavaScript </title>
+		<title>Question 2</title>
 
 	
 	</head>
@@ -10,46 +10,45 @@
 	<body>
 		<h1> Palindrome</h1>
 		<div class="palindrome">
-		<label> Enter any string or number : </label> <br> <br>
-		<input id= "palindrome"> <br> <br>
-		<button type = "button" onclick = "palindrome()" > Check </button>
+		<label> Enter some text here: </label> <br> <br>
+		<input id= "pali"> <br> <br>
+		<button type = "button" onclick = "checkPali()" > Check </button>
 		<img src="checkmark.jpg" id="check" style="width:15px;height:15px;">
 		<img src="xmark.png" id="x" style="width:15px;height:15px;"s>
 		</div>
 		</body>
-    <style>
-      img {
-        visibility: hidden;
-      }
-    </style>
+		<style>
+			img{
+				visibility:hidden;
+			}
+		</style>
 		
 		<script>
-		function palindrome() {
-		var isPalindrome;
-		str = document.getElementById ("palindrome").value;
+			function checkPali() {
+				var isPalindrome;
+				str = document.getElementById ("pali").value;
 		
-		if (str == null) {
-			isPadlinrome = true;
-		}
+				if (str == null) {
+					isPadlinrome = true;
+				}
 
-		else {
-			isPalindrome = str == str.split('').reverse().join('');
-		} 
-		 
-	
-		if (isPalindrome)
-		{
-			console.log("yes");
-      		document.getElementById('check').style.visibility = 'visible';
-			  document.getElementById('x').style.visibility = 'hidden';
-		}
-		else
-		{
-			console.log("no");
-      		document.getElementById('x').style.visibility = 'visible';
-			  document.getElementById('check').style.visibility = 'hidden';
-		}
-		}
+				else {
+					isPalindrome = (str == str.split('').reverse().join(''));
+				} 
+				
+			
+				if (isPalindrome){
+					console.log("yes");
+					document.getElementById('check').style.visibility = 'visible';
+					document.getElementById('x').style.visibility = 'hidden';
+				}
+				
+				else{
+					console.log("no");
+					document.getElementById('x').style.visibility = 'visible';
+					document.getElementById('check').style.visibility = 'hidden';
+				}
+			}
 		</script>
 
  

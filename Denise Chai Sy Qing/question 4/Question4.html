@@ -56,7 +56,7 @@
 		$( "#arrDel").click(function() {
 
 			arrayy = arrayy.filter(item => item !== $("#arrayAddText").val())
-			console.log(arrayy); //this is correct
+			console.log(arrayy); 
 			$("#array").html("");
 			arrayy.forEach(el => {
 				$("#array").append(el + "  |  ");
@@ -84,19 +84,19 @@
 				$("#set").append(el + "  |  ");
 				
 			})
-		}); //this is good
+		}); 
 
 		$( "#setDel").click(function() {
 
 			sett.delete($("#setAddText").val());
-			console.log(sett); //this is correct
+			console.log(sett); 
 			$("#set").html("");
 			sett.forEach(el => {
 				$("#set").append(el + "  |  ");
 				
 			})
 
-		});		 //this is good
+		});		
 		
 
 
@@ -110,7 +110,7 @@
   			$("#map").append(`${key}:${value}  `);
 		}
 
-		map1.forEach(logMapElements); //this is good
+		map1.forEach(logMapElements); 
 
 
 		$("#mapAdd").click(function() {
@@ -118,7 +118,7 @@
 			map1.set ($("#mapAddTextKey").val(),  $("#mapAddTextVal").val());
 			console.log($("#mapAddTextKey").val());
 			console.log($("#mapAddTextVal").val());
-			map1.forEach(logMapElements); //this is not adding to DOM
+			map1.forEach(logMapElements); 
 		}); 
 
 		$( "#mapDel").click(function() {
@@ -128,7 +128,7 @@
 			$("#map").html("");
 			map1.forEach(logMapElements);
 
-		}); //this is good
+		}); 
 
 
 	</script>
