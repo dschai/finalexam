@@ -1,0 +1,54 @@
+<!Doctype html>
+
+	<head>
+		<title>Question 7</title>
+
+	
+	</head>
+	
+	<body>
+		<label for="input">Enter a random number from 1 to 10:</label>
+
+		<textarea id="input" name="input" rows="1" cols="3">
+		
+		</textarea>
+		<button type="button" id="add">add Number</button>
+		<button type="button" id="show">Show Numbers</button>
+		<div id="numsSet"> </div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<script>
+
+		const mySet1 = new Set();
+
+		$( "#add" ).click(function() {
+			
+			var num = $('#input').val();
+
+			if (num >= 1 && num <= 10) {
+				mySet1.add(num);
+			}
+			else {
+			
+			}
+		});
+
+		var numList = "";
+		$( "#show" ).click(function() {
+			$( "#numsSet" ).html("");
+			numList = "";
+			for (item of mySet1.values() ) {
+				numList +=  " " + item
+			}
+				
+			$( "#numsSet" ).html(numList);
+		});
+
+	</script>
+	
+	
+
+ 
+</html>

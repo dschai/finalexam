@@ -1,0 +1,83 @@
+<!Doctype html>
+
+	<head>
+		<title>Question 7</title>
+
+	
+	</head>
+	
+	<body>
+
+	</body>
+
+	
+	<script>
+		class Human{
+			constructor(eyeColor, height, weight, gender, name) {
+				this.eyeColor = eyeColor;
+				this.height = height;
+				this.weight = weight;
+				this.gender= gender;
+				this.name = name;
+
+			}
+
+			getEyeColor() {
+				return this.eyeColor;
+			}
+
+			setEyeColor(newColor) {
+				this.eyeColor = newColor;
+			}
+
+			getHeight() {
+				return this.height;
+			}
+
+			setHeight(newHeight) {
+				this.height= newHeight;
+			}
+
+			getWeight() {
+				return this.weight
+			}
+
+			setWeight(newWeight) {
+				this.weight = newWeight;
+			}
+
+
+			getGender() {
+				return this.gender;
+			}
+
+			setGender(newGender) {
+				this.eyeColor = newColor;
+			}
+
+
+			getName() {
+				return this.name;
+			}
+
+			setName(newName) {
+				this.name = newName;
+			}
+
+
+			toString(){
+				console.log("Eye Color: " + this.eyeColor + " Height: " + this.height + " Weight: " + this.weight + " Gender: " + this.gender + " Name: " + this.name);
+			}
+		}
+
+		var human = new Human();
+		human.setName("bob");
+		human.toString();
+
+
+	</script>
+	
+	
+
+ 
+</html>
