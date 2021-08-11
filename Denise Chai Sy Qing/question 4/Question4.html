@@ -61,13 +61,38 @@
 		//SET
 		var sett = new Set();
 		sett.add("defaultString");
+		sett.add("defaultString");
+		sett.add("1");
+		sett.add("2");
 		
+		sett.forEach(el => {
+			document.getElementById("set").append(el + "  |  ");
+		})	
 		
-		
-		
-		
-		// var mapp = 
+		$("#setAdd").click(function() {
+			$("#set").html("");
+			sett.add($("#setAddText").val());
+			sett.forEach(el => {
+				$("#set").append(el + "  |  ");
+				
+			})
+		}); //this is good
 
+		$( "#setDel").click(function() {
+
+			sett.delete($("#setAddText").val());
+			console.log(sett); //this is correct
+			$("#set").html("");
+			sett.forEach(el => {
+				$("#set").append(el + "  |  ");
+				
+			})
+
+		});		 //this is good
+		
+
+
+		//Map
 
 	</script>
 
