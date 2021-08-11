@@ -106,11 +106,11 @@
 		map1.set('b', 2);
 		map1.set('c', 3);
 	    
-		function logMapElements(value, key, map) {
-  			$("#map").append(`${key}:${value}  `);
+		function processElements(val, key, map) {
+  			$("#map").append(`${key}:${val}  `);
 		}
 
-		map1.forEach(logMapElements); 
+		map1.forEach(processElements); 
 
 
 		$("#mapAdd").click(function() {
@@ -118,7 +118,7 @@
 			map1.set ($("#mapAddTextKey").val(),  $("#mapAddTextVal").val());
 			console.log($("#mapAddTextKey").val());
 			console.log($("#mapAddTextVal").val());
-			map1.forEach(logMapElements); 
+			map1.forEach(processElements); 
 		}); 
 
 		$( "#mapDel").click(function() {
