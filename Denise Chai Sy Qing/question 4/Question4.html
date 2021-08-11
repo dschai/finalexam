@@ -19,9 +19,17 @@
 		
 		<h1> Map</h1>
 		<p id="map"></p>
-		<textarea id="mapAddText" name="mapddText"></textarea>
-		<button id="mapAdd" type="button">add</button>
-		<button id="mapDel" type="button">delete</button>
+		<label for="mapAddTextKey">Add Key</label><br>
+		<textarea id="mapAddTextKey" name="mapddTextKey"></textarea> <br>
+		<label for="mapAddTextVal">Add Value</label><br>
+		<textarea id="mapAddTextVal" name="mapddTextVal"></textarea> <br>
+		<button id="mapAdd" type="button">add</button>	 <br>
+		
+		<label for="mapDelKey">Delete Key</label><br>
+		<textarea id="mapDelKey" name="mapDelKey"></textarea> <br>
+		<button id="mapDel" type="button">delete</button>	 <br>
+		
+	
 
 	
 	</head>
@@ -93,6 +101,35 @@
 
 
 		//Map
+		const map1 = new Map();
+		map1.set('a', 1);
+		map1.set('b', 2);
+		map1.set('c', 3);
+	    
+		function logMapElements(value, key, map) {
+  			$("#map").append(`${key}:${value}  `);
+		}
+
+		map1.forEach(logMapElements); //this is good
+
+
+		$("#mapAdd").click(function() {
+			$("#map").html("");
+			map1[$("#mapAddTextKey").val()] = $("#mapAddTextVal").val();
+			console.log($("#mapAddTextKey").val());
+			console.log($("#mapAddTextVal").val());
+			map1.forEach(logMapElements); //this is not adding to DOM
+		}); 
+
+		$( "#mapDel").click(function() {
+
+			map1.delete($("#mapDelKey").val());
+			
+			$("#map").html("");
+			map1.forEach(logMapElements);
+
+		}); //this is good
+
 
 	</script>
 
