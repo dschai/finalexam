@@ -52,7 +52,7 @@
 			}
 
 			setGender(newGender) {
-				this.eyeColor = newColor;
+				this.gender = newGender;
 			}
 
 
@@ -72,6 +72,17 @@
 
 		var human = new Human();
 		human.setName("bob");
+		human.setName("newName");
+		console.log(human.getName());
+		human.setEyeColor("blue");
+		console.log(human.getEyeColor());
+		human.setGender("female");
+		console.log(human.getGender());
+		human.setWeight("50 kg");
+		console.log(human.getWeight());
+		human.setHeight("1.6 m");
+		console.log(human.getHeight());
+
 		human.toString();
 
 
