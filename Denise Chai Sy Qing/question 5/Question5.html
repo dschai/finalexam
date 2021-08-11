@@ -19,16 +19,14 @@
 
 
 		var request = new Request('https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com');
+		
 		fetch(request, {mode: 'no-cors'})
 			.then(function(response) {
-				console.log(response);
 				console.log(JSON.stringify(response));
 				$('textarea').val(JSON.stringify(response));
-
 			}).catch(function(error) {  
-			console.log('Request failed', error)  
+				console.log('Request failed', error)  
 			});
-
 
 
 	</script>
