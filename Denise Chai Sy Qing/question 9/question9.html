@@ -1,7 +1,7 @@
 <!Doctype html>
 
 	<head>
-		<title>Question 7</title>
+		<title>Question 9</title>
 
 	
 	</head>
@@ -9,9 +9,9 @@
 	<body>
 		<label for="input">Enter a random number from 1 to 10:</label>
 
-		<textarea id="input" name="input" rows="1" cols="3">
-		
-		</textarea>
+		<textarea id="input" name="input" rows="1" cols="3"></textarea>
+
+
 		<button type="button" id="add">add Number</button>
 		<button type="button" id="show">Show Numbers</button>
 		<div id="numsSet"> </div>
@@ -21,17 +21,17 @@
 	
 	<script>
 
-		const mySet1 = new Set();
+		const mySet = new Set();
 
 		$( "#add" ).click(function() {
 			
 			var num = $('#input').val();
 
 			if (num >= 1 && num <= 10) {
-				mySet1.add(num);
+				mySet.add(num);
 			}
 			else {
-			
+				alert("please enter a number between 1 to 10")
 			}
 		});
 
@@ -39,7 +39,7 @@
 		$( "#show" ).click(function() {
 			$( "#numsSet" ).html("");
 			numList = "";
-			for (item of mySet1.values() ) {
+			for (item of mySet.values() ) {
 				numList +=  " " + item
 			}
 				
@@ -47,8 +47,4 @@
 		});
 
 	</script>
-	
-	
-
- 
 </html>
