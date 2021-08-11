@@ -115,7 +115,7 @@
 
 		$("#mapAdd").click(function() {
 			$("#map").html("");
-			map1[$("#mapAddTextKey").val()] = $("#mapAddTextVal").val();
+			map1.set ($("#mapAddTextKey").val(),  $("#mapAddTextVal").val());
 			console.log($("#mapAddTextKey").val());
 			console.log($("#mapAddTextVal").val());
 			map1.forEach(logMapElements); //this is not adding to DOM
