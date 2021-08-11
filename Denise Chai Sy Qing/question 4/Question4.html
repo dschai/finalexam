@@ -29,22 +29,49 @@
 	<body>
 
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 		
 	<script>
+
+		//Array
 		var arrayy = [10, 25, "string", true, false, 150, 200, 300, "string100"];
 		arrayy.forEach(el => {
-			document.getElementById("array").appendChild(el);
+			document.getElementById("array").append(el + "  |  ");
 		})
 
-		var sett = new set();
+		$( "#arrAdd").click(function() {
+			arrayy.push($("#arrayAddText").val());
+			document.getElementById("array").append($("#arrayAddText").val() + "  |  ");
+		});
+
+		$( "#arrDel").click(function() {
+
+			arrayy = arrayy.filter(item => item !== $("#arrayAddText").val())
+			console.log(arrayy); //this is correct
+			$("#array").html("");
+			arrayy.forEach(el => {
+				$("#array").append(el + "  |  ");
+				
+			})
+
+		});
+
+
+		//SET
+		var sett = new Set();
 		sett.add("defaultString");
+		
+		
+		
+		
+		
 		// var mapp = 
 
 
 	</script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
  
 <html>
